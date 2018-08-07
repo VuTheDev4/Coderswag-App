@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		EAF64A3A2119314B006FE8C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF64A392119314B006FE8C5 /* AppDelegate.swift */; };
-		EAF64A3C2119314B006FE8C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF64A3B2119314B006FE8C5 /* ViewController.swift */; };
+		EAF64A3C2119314B006FE8C5 /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF64A3B2119314B006FE8C5 /* CategoriesVC.swift */; };
 		EAF64A3F2119314B006FE8C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF64A3D2119314B006FE8C5 /* Main.storyboard */; };
 		EAF64A412119314C006FE8C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF64A402119314C006FE8C5 /* Assets.xcassets */; };
 		EAF64A442119314C006FE8C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF64A422119314C006FE8C5 /* LaunchScreen.storyboard */; };
+		EAF64A4F21193AD4006FE8C5 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF64A4E21193AD4006FE8C5 /* CategoryCell.swift */; };
+		EAF64A5121193E75006FE8C5 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF64A5021193E75006FE8C5 /* Category.swift */; };
+		EAF64A542119416E006FE8C5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF64A532119416E006FE8C5 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EAF64A362119314B006FE8C5 /* coder-swag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "coder-swag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF64A392119314B006FE8C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EAF64A3B2119314B006FE8C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EAF64A3B2119314B006FE8C5 /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
 		EAF64A3E2119314B006FE8C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAF64A402119314C006FE8C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAF64A432119314C006FE8C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAF64A452119314C006FE8C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAF64A4E21193AD4006FE8C5 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		EAF64A5021193E75006FE8C5 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		EAF64A532119416E006FE8C5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		EAF64A382119314B006FE8C5 /* coder-swag */ = {
 			isa = PBXGroup;
 			children = (
+				EAF64A5221194149006FE8C5 /* Service */,
+				EAF64A4D21193A00006FE8C5 /* View */,
+				EAF64A4C211939FA006FE8C5 /* Model */,
+				EAF64A4B211939E5006FE8C5 /* Controller */,
 				EAF64A392119314B006FE8C5 /* AppDelegate.swift */,
-				EAF64A3B2119314B006FE8C5 /* ViewController.swift */,
 				EAF64A3D2119314B006FE8C5 /* Main.storyboard */,
 				EAF64A402119314C006FE8C5 /* Assets.xcassets */,
 				EAF64A422119314C006FE8C5 /* LaunchScreen.storyboard */,
 				EAF64A452119314C006FE8C5 /* Info.plist */,
 			);
 			path = "coder-swag";
+			sourceTree = "<group>";
+		};
+		EAF64A4B211939E5006FE8C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAF64A3B2119314B006FE8C5 /* CategoriesVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EAF64A4C211939FA006FE8C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAF64A5021193E75006FE8C5 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EAF64A4D21193A00006FE8C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAF64A4E21193AD4006FE8C5 /* CategoryCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAF64A5221194149006FE8C5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EAF64A532119416E006FE8C5 /* DataService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAF64A3C2119314B006FE8C5 /* ViewController.swift in Sources */,
+				EAF64A3C2119314B006FE8C5 /* CategoriesVC.swift in Sources */,
 				EAF64A3A2119314B006FE8C5 /* AppDelegate.swift in Sources */,
+				EAF64A4F21193AD4006FE8C5 /* CategoryCell.swift in Sources */,
+				EAF64A5121193E75006FE8C5 /* Category.swift in Sources */,
+				EAF64A542119416E006FE8C5 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
